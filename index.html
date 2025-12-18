@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richardus Gagi | Senior Offices & Database Expert</title>
+    <meta name="description"
+        content="Professional portfolio of Richardus Gagi - Specialist in Senior Offices, Database management, Web Development, and Data Entry.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Intro Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <h1 id="typewriter-text"></h1><span class="cursor-blink">_</span>
+            <div id="press-start" style="display: none;">[ PRESS START ]</div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="logo" title="Reset Intro">Richardus<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <div class="profile-container reveal-text">
+                    <img src="profile-my.jpeg" alt="Richardus Gagi" class="profile-img">
+                </div>
+                <div class="text-content">
+                    <span id="hero-subtitle" class="subtitle"></span>
+                    <h1 id="hero-title" class="title"></h1>
+                    <p id="hero-desc" class="description"></p>
+                </div>
+                <!-- Hidden source text for typing -->
+                <div id="typing-source" style="display:none;">
+                    <div data-target="hero-subtitle">Hello, I am</div>
+                    <div data-target="hero-title">Richardus Gagi</div>
+                    <div data-target="hero-desc">Professional excellence in <span class="highlight">Senior
+                            Offices</span>, <span class="highlight">Database Management</span>, <span
+                            class="highlight">Web Development</span>, and <span class="highlight">Data Entry</span>.
+                    </div>
+                </div>
+
+                <div class="cta-group reveal-text" style="opacity: 0;"> <!-- wait for typing -->
+                    <a href="#expertise" class="btn btn-primary">My Expertise</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="grid-floor"></div>
+                <!-- Spheres removed/hidden via CSS -->
+            </div>
+        </section>
+
+        <section id="expertise" class="expertise section">
+            <div class="container">
+                <h2 class="section-title reveal-scroll">My <span class="highlight">Expertise</span></h2>
+                <div class="cards-grid">
+                    <!-- Senior Offices -->
+                    <div class="card reveal-scroll" style="transition-delay: 100ms; cursor: pointer;"
+                        onclick="window.location.href='senior-offices.html'">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Senior Offices</h3>
+                        <p>High-level administrative support, strategic planning, and operational efficiency for
+                            corporate environments.</p>
+                        <p style="font-size: 0.7rem; margin-top: 1rem; color: var(--secondary-color);">[CLICK TO READ
+                            MORE]</p>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="card reveal-scroll" style="transition-delay: 200ms; cursor: pointer;"
+                        onclick="window.location.href='database.html'">
+                        <div class="card-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Database</h3>
+                        <p>Expert management of complex data structures, SQL optimization, and secure data storage
+                            solutions.</p>
+                        <p style="font-size: 0.7rem; margin-top: 1rem; color: var(--secondary-color);">[CLICK TO READ
+                            MORE]</p>
+                    </div>
+
+                    <!-- Website -->
+                    <div class="card reveal-scroll" style="transition-delay: 300ms; cursor: pointer;"
+                        onclick="window.location.href='website.html'">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Website</h3>
+                        <p>Modern, responsive, and high-performance web development using the latest technologies and
+                            design trends.</p>
+                        <p style="font-size: 0.7rem; margin-top: 1rem; color: var(--secondary-color);">[CLICK TO READ
+                            MORE]</p>
+                    </div>
+
+                    <!-- Data Entry -->
+                    <div class="card reveal-scroll" style="transition-delay: 400ms; cursor: pointer;"
+                        onclick="window.location.href='data-entry.html'">
+                        <div class="card-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3>Data Entry</h3>
+                        <p>Precision and speed in data processing, ensuring accuracy and integrity for all your critical
+                            records.</p>
+                        <p style="font-size: 0.7rem; margin-top: 1rem; color: var(--secondary-color);">[CLICK TO READ
+                            MORE]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="game" class="section">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title reveal-scroll">Break <span class="highlight">Time</span></h2>
+                <p class="description reveal-scroll" style="margin: 0 auto 2rem auto;">Score: <span id="score">0</span>
+                </p>
+                <div class="game-wrapper reveal-scroll">
+                    <canvas id="gameCanvas" width="400" height="400"></canvas>
+                    <div class="d-pad" style="margin-top: 1rem; display: none;">
+                        <!-- Hidden by default, shown on mobile via CSS -->
+                        <div class="d-row">
+                            <button id="upBtn" class="d-btn"><i class="fas fa-chevron-up"></i></button>
+                        </div>
+                        <div class="d-row">
+                            <button id="leftBtn" class="d-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button id="rightBtn" class="d-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="d-row">
+                            <button id="downBtn" class="d-btn"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-controls">
+                        <button id="startBtn" class="btn btn-primary" style="margin-top: 1rem;">Start Game</button>
+                    </div>
+                    <p id="pc-instructions" style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">Press
+                        <span class="highlight">Arrow Keys</span> to Start & Move</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-wrapper reveal-scroll">
+                    <h2 class="section-title">Let's Work <span class="highlight">Together</span></h2>
+                    <p>Ready to elevate your project? Reach out below.</p>
+                    <a href="mailto:Rickygagi3@Gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i>
+                        Contact Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Richardus Gagi. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

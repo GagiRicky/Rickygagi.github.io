@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development | Richardus Gagi</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .pixel-art-showcase {
+            margin-top: 2rem;
+            max-width: 600px;
+            border: 4px solid var(--primary-color);
+            box-shadow: 10px 10px 0px var(--secondary-color);
+            background: #000;
+        }
+
+        .pixel-art-showcase img {
+            width: 100%;
+            display: block;
+            image-rendering: pixelated;
+        }
+
+        .content-block {
+            background: #000;
+            border: 4px solid var(--card-border);
+            padding: 3rem;
+            max-width: 800px;
+            margin: -50px auto 4rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: 8px 8px 0px rgba(50, 50, 50, 0.5);
+        }
+
+        .content-block h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .content-block p {
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .content-block ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .content-block ul li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .content-block ul li::before {
+            content: '>';
+            color: var(--secondary-color);
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">Richardus<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#expertise">Expertise</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1 class="title">Web Development</h1>
+            <div class="pixel-art-showcase">
+                <img src="pixel-website.png" alt="Pixel Art Web Developer Station">
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="content-block">
+                <h2>Modern & Responsive Web Solutions</h2>
+                <p>
+                    Your website is your digital storefront. I build high-performance, visually stunning websites that
+                    not only look good but convert visitors into clients.
+                </p>
+
+                <ul>
+                    <li>Responsive Design for All Devices</li>
+                    <li>Performance Optimization & SEO</li>
+                    <li>Interactive UI/UX with Modern Frameworks</li>
+                    <li>Custom Web Applications (SaaS)</li>
+                    <li>E-Commerce Integration</li>
+                </ul>
+
+                <p>
+                    From simple landing pages to complex web applications, I bring pixel-perfect precision (literally!)
+                    to your online presence.
+                </p>
+
+                <div style="text-align: center;">
+                    <a href="index.html#contact" class="btn btn-primary">Hire for Web Dev</a>
+                    <a href="index.html#expertise" class="btn btn-secondary">Back</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Richardus Gagi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
